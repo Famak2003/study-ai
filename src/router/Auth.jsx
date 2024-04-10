@@ -38,7 +38,7 @@ function Auth() {
   }, [currentPage]);
 
   return (
-    <section className=" flex flex-col gap-[6rem] text-center pt-[8rem] generalPadding">
+    <section className=" flex flex-col gap-[5rem] text-center pt-[5rem] generalPadding">
       <div className="">
         <h1 className=" text-[5.2rem] ">ChatAI</h1>
         <p className=" text-[1.4rem]">{`Please ${currentPage} To Your Account`}</p>
@@ -68,7 +68,7 @@ function Auth() {
         </div>
       </div>
       <Form
-        className=" flex flex-col gap-[2rem] "
+        className=" flex flex-col "
         onFinish={(value) => {
           console.log(value);
         }}
