@@ -10,6 +10,10 @@ module.exports = {
         "light-gray": "#878787",
         "custom-white": "#f4f4f4",
       },
+      screens: {
+        mobile: "431px",
+        smobile: "300px",
+      },
     },
   },
   plugins: [],
