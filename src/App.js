@@ -1,33 +1,34 @@
-// import { Route, Routes } from "react-router-dom";
-import * as Pages from "./pages";
-import Auth from "./router/Auth";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Pages.LandingPage />,
-  },
-  {
-    element: <Auth />,
-    children: [
-      {
-        path: "/auth/login",
-        element: <Pages.Login />,
-      },
-      {
-        path: "auth/signup",
-        element: <Pages.CreateAccount />,
-      },
-    ],
-  },
-]);
+// import { Helmet } from "react-helmet-async";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isHalfwayScrolled, setIsHalfwayScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const halfwayPoint = windowHeight / 3;
+
+      setIsHalfwayScrolled(scrollPosition >= halfwayPoint);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    console.log(isHalfwayScrolled);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHalfwayScrolled]);
   return (
-    <div className="App ring-2 ring-red-800 h-screen">
-      <RouterProvider router={router} />
-    </div>
+    <>
+      {/* <Helmet>
+        // <title>Chat AI</title>
+        //{" "}
+      </Helmet> */}
+      <div className="App h-[100%] pb-[5rem] max-w-[150rem]">
+        <RouterProvider router={router} />
+      </div>
+    </>
   );
 }
 

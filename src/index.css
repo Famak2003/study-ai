@@ -2,19 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html{
+html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
 }
 
-.App{
+body {
+  background: #000000;
+}
+.App {
   background: #202020;
-  color: #FFFFFF
+  border-radius: 0.5rem;
+  border: 1px solid #878787;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @layer components {
-  .generalPadding{
-    @apply px-[2rem]
+  .generalPadding {
+    @apply px-[2rem];
   }
 }

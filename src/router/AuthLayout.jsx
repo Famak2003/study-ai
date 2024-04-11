@@ -3,8 +3,8 @@ import FACEBOOK from "./../assets/facebook.png";
 import APPLE from "./../assets/apple.png";
 
 import { Form } from "antd";
-import { Link, Outlet } from "react-router-dom";
-import * as Hooks from "./../hooks";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import * as Hooks from "../hooks";
 import { Primary } from "../components/Buttons";
 import { useEffect, useState } from "react";
 
@@ -16,10 +16,11 @@ const socials = [
 
 function Auth() {
   const [currentPage] = Hooks.useGetCurrentPage();
-  const [questioner, setQuestioner] = useState({});
+  const [authContent, setAuthContent] = useState({});
+  const nav = useNavigate();
 
   useEffect(() => {
-    function linker() {
+    function authContentDecider() {
       if (currentPage === "login") {
         return {
           text: "Don't have an account?",
@@ -34,11 +35,15 @@ function Auth() {
         };
       }
     }
-    setQuestioner(linker());
+    setAuthContent(authContentDecider());
   }, [currentPage]);
 
+  const handleNavigate = () => {
+    nav("/home/chat-history");
+  };
+
   return (
-    <section className=" flex flex-col gap-[5rem] text-center pt-[5rem] generalPadding">
+    <div className=" flex flex-col gap-[5rem] text-center pt-[5rem] ">
       <div className="">
         <h1 className=" text-[5.2rem] ">ChatAI</h1>
         <p className=" text-[1.4rem]">{`Please ${currentPage} To Your Account`}</p>
@@ -68,8 +73,9 @@ function Auth() {
         </div>
       </div>
       <Form
-        className=" flex flex-col "
+        className=" flex flex-col gap-[1rem] "
         onFinish={(value) => {
+          handleNavigate();
           console.log(value);
         }}
       >
@@ -80,12 +86,12 @@ function Auth() {
       </Form>
 
       <p>
-        {questioner?.text} &nbsp;
-        <Link to={questioner.link}>
-          <span className=" text-custom-red ">{questioner?.actionText}</span>
+        {authContent?.text} &nbsp;
+        <Link to={authContent.link}>
+          <span className=" text-custom-red ">{authContent?.actionText}</span>
         </Link>
       </p>
-    </section>
+    </div>
   );
 }
 
