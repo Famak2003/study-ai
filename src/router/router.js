@@ -3,6 +3,7 @@ import AppLayout from "./AppLayout";
 import AuthLayout from "./AuthLayout";
 import HomeLayout from "./HomeLayout";
 import * as Pages from "./../pages";
+import { action as chatAction } from "../pages/chat/Chat";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -37,6 +38,8 @@ const router = createBrowserRouter([
           {
             path: "/home/chat",
             element: <Pages.Chat />,
+            action: chatAction,
+            errorElement: <Error />,
           },
         ],
       },

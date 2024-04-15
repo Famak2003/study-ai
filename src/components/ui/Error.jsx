@@ -4,7 +4,8 @@ import * as Button from "./../Buttons";
 function Error() {
   const navigate = useNavigate();
   const error = useRouteError();
-  const errorMessage = error.data.includes("Error: No route matches")
+  console.error(error);
+  const errorMessage = error?.data?.includes("Error: No route matches")
     ? `wait hold on its on you not us === > ${error.data}`
     : error.data;
 

@@ -1,0 +1,36 @@
+$white: #ffffff;
+$light-gray: #292929;
+$custom-black: #202020;
+$custom-red: #d71e1e;
+
+.textInput {
+  color: $white !important;
+  &:active {
+    background: $custom-black !important;
+    border: none !important;
+  }
+  &:hover {
+    background: $custom-black !important;
+    border: none !important;
+  }
+}
+
+.bot {
+  //   display: none;
+  background: $custom-red;
+  padding: 2rem;
+  font-size: 1.4rem;
+  max-width: 60%;
+  height: fit-content;
+  border-radius: 1rem 1rem 1rem 0;
+}
+
+.human {
+  background: $light-gray;
+  align-self: flex-end;
+  padding: 2rem;
+  font-size: 1.4rem;
+  max-width: 60%;
+  height: fit-content;
+  border-radius: 1rem 1rem 0 1rem;
+}

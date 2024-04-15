@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --custom-red: #d71e1e;
+  --light-gray: #292929;
+  --custom-black: #202020;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
@@ -16,6 +22,20 @@ body {
   color: #ffffff;
   margin-left: auto;
   margin-right: auto;
+}
+
+.Customise-ScrollBar {
+  overflow-y: scroll;
+}
+
+.Customise-ScrollBar::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--lightgray);
+  border-radius: 1rem;
+}
+.Customise-ScrollBar::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--blue);
 }
 
 @layer components {
