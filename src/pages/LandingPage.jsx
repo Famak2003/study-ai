@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 
 function LandingPage() {
   return (
-    <div className=" flex flex-col bg-transparent pb-[5rem] mb-[5rem] ">
-      <figure className=" h-[60%] w-full mb-[3rem] ">
+    <div className=" h-[100vh] flex flex-col bg-transparent  ">
+      <figure className="h-[65%] w-full mb-[3rem] ">
         <img
-          className=" h-full w-full object-contain "
+          className=" h-full w-full object-cover "
           src={LANDING}
           alt="landing-page"
         />
       </figure>
-      <div className=" flex flex-col gap-[2rem] justify-center items-center text-center generalPadding ">
+      <div className=" flex flex-col gap-[2rem] justify-center h-[40%] items-center text-center generalPadding ">
         <h1 className=" font-bold text-[2.4rem] ">
           The Future of Chat is Here With AI Technology
         </h1>
