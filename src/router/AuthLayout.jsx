@@ -1,6 +1,6 @@
 import GOOGLE from "./../assets/google.png";
 import FACEBOOK from "./../assets/facebook.png";
-import APPLE from "./../assets/apple.png";
+// import APPLE from "./../assets/apple.png";
 
 import { Form } from "antd";
 import { Link, Outlet, useNavigate } from "react-router-dom";
@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 const socials = [
   { alt: "google", image: GOOGLE },
   { alt: "facebook", image: FACEBOOK },
-  { alt: "apple", image: APPLE },
+  // { alt: "apple", image: APPLE },
 ];
 
 function Auth() {
@@ -43,7 +43,7 @@ function Auth() {
   };
 
   return (
-    <div className=" flex flex-col gap-[5rem] text-center pt-[5rem] generalPadding">
+    <div className=" flex flex-col gap-[5rem] text-center py-[5rem] generalPadding">
       <div className="">
         <h1 className=" text-[5.2rem] ">ChatAI</h1>
         <p className=" text-[1.4rem]">{`Please ${currentPage} To Your Account`}</p>

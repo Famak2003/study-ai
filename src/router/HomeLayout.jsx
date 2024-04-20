@@ -4,7 +4,7 @@ import DOTTEDMENU from "./../assets/dotted-menu.png";
 
 function Home() {
   return (
-    <div className=" flex flex-col h-fit ">
+    <div className=" flex flex-col h-fit overflow-hidden ">
       <div className=" h-[20vh] flex justify-between items-center generalPadding ">
         <figure>
           <img src={STARGGERDMENU} alt="menu" />

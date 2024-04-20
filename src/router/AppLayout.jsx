@@ -5,7 +5,7 @@ function AppLayout() {
   // console.log(nav);
   const isLoading = nav.state === "loading";
   return (
-    <section className=" w-full h-fit ring-1">
+    <section className=" w-full ">
       {isLoading && (
         <div className=" flex w-full text-center items-center justify-center p-[1rem] ">
           Loading...

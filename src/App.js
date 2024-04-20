@@ -9,7 +9,7 @@ function App() {
         // <title>Chat AI</title>
         //{" "}
       </Helmet> */}
-      <div className="App h-fit max-w-[150rem] ring-2 ring-green-600 ">
+      <div className="App h-fit max-w-[150rem] ">
         <RouterProvider router={router} />
       </div>
     </>
