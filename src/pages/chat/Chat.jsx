@@ -31,7 +31,7 @@ function Chat() {
         ))}
       </ul>
 
-      <div className=" h-[30%] w-full rounded-t-[2rem] bg-charcoal-gray px-[2rem] pt-[2.5rem] ">
+      <div className=" h-fit w-full rounded-t-[2rem] bg-charcoal-gray px-[2rem] py-[2.5rem] ">
         <Form
           method="POST"
           className=" flex justify-between gap-[1rem] items-center "

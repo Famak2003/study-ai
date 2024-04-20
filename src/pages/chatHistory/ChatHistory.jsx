@@ -17,7 +17,7 @@ function Home() {
     });
   };
   return (
-    <div className=" flex flex-col gap-[4rem] generalPadding">
+    <div className=" flex flex-col gap-[4rem] generalPadding pb-[5rem]">
       <div className=" flex flex-col gap-[2rem]">
         <p className=" text-[1.6rem]">New Chats</p>
         <Link to={"/home/chat"}>

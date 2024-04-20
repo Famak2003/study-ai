@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function LandingPage() {
   return (
-    <div className=" flex flex-col bg-transparent ">
+    <div className=" flex flex-col bg-transparent pb-[5rem] mb-[5rem] ">
       <figure className=" h-[60%] w-full mb-[3rem] ">
         <img
           className=" h-full w-full object-contain "
@@ -12,7 +12,7 @@ function LandingPage() {
           alt="landing-page"
         />
       </figure>
-      <div className=" flex flex-col gap-[3rem] justify-center items-center text-center generalPadding ">
+      <div className=" flex flex-col gap-[2rem] justify-center items-center text-center generalPadding ">
         <h1 className=" font-bold text-[2.4rem] ">
           The Future of Chat is Here With AI Technology
         </h1>
