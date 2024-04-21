@@ -5,10 +5,10 @@ import DOTTEDMENU from "./../assets/dotted-menu.png";
 import { useState } from "react";
 
 function Home() {
-  const [dispayMenu, setDispayMenu] = useState(true);
+  const [dispayMenu, setDispayMenu] = useState(false);
   return (
     <div className=" flex flex-col h-fit overflow-hidden ">
-      <div className=" h-[20vh] flex justify-between items-center generalPadding ">
+      <div className=" h-[15vh] flex justify-between items-center generalPadding ">
         <button className=" " onClick={() => setDispayMenu(!dispayMenu)}>
           <img src={STARGGERDMENU} alt="menu" />
         </button>

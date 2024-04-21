@@ -5,12 +5,14 @@ $custom-red: #d71e1e;
 
 .textInput {
   color: $white !important;
+  background: $custom-black !important;
   &:active {
-    background: $custom-black !important;
     border: none !important;
   }
+  &::placeholder {
+    color: $white !important;
+  }
   &:hover {
-    background: $custom-black !important;
     border: none !important;
   }
 }
