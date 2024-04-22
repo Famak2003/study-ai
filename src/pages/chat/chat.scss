@@ -1,5 +1,6 @@
 $white: #ffffff;
-$light-gray: #292929;
+$light-gray: #878787;
+$gray: #292929;
 $custom-black: #202020;
 $custom-red: #d71e1e;
 
@@ -10,7 +11,7 @@ $custom-red: #d71e1e;
     border: none !important;
   }
   &::placeholder {
-    color: $white !important;
+    color: $light-gray !important;
   }
   &:hover {
     border: none !important;
@@ -28,7 +29,7 @@ $custom-red: #d71e1e;
 }
 
 .human {
-  background: $light-gray;
+  background: $gray;
   align-self: flex-end;
   padding: 2rem;
   font-size: 1.4rem;
