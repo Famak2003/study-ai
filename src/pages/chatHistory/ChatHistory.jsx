@@ -1,21 +1,11 @@
 import "./chatHistory.scss";
 
-import ARROWUP from "./../../assets/arrow-up.png";
-
 import * as Button from "../../components/Buttons";
 import ChatHistoryElement from "./ChatHistoryElement";
 import { Link } from "react-router-dom";
 import useIsWindowScrolled from "../../hooks/useIsWindowScrolled";
 
 function Home() {
-  const isScrolled = useIsWindowScrolled();
-
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", //smooth scrolling animation
-    });
-  };
   return (
     <div className=" flex flex-col gap-[4rem] generalPadding pb-[5rem]">
       <div className=" flex flex-col gap-[2rem]">
@@ -60,18 +50,6 @@ function Home() {
           </ul>
         </div>
       </div>
-      {isScrolled && (
-        <div
-          className=" fixed bottom-[4rem] right-[.5rem] mobile:right-[2rem]"
-          onClick={handleScrollToTop}
-        >
-          <img
-            className=" scale-75 hover:scale-90 duration-300"
-            src={ARROWUP}
-            alt="scroll up"
-          />
-        </div>
-      )}
     </div>
   );
 }

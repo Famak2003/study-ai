@@ -27,7 +27,7 @@ function Chat() {
   }, [conversation]);
 
   return (
-    <div className=" flex-auto flex flex-col justify-between gap-[1rem] w-full h-[85vh] ">
+    <div className=" flex-auto flex flex-col justify-between gap-[1rem] w-full h-[85svh] ">
       <ul className=" Customise-ScrollBar w-full flex flex-col gap-[3rem] overflow-y-scroll generalPadding h-full  ">
         {conversation.map((obj, idx) => (
           <li key={idx} className={` ${obj.author}`}>

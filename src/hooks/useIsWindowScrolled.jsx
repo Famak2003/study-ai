@@ -6,7 +6,7 @@ function useIsWindowScrolled() {
     const handleScroll = () => {
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
-      const halfwayPoint = windowHeight / 3;
+      const halfwayPoint = windowHeight / 6;
 
       setIsHalfwayScrolled(scrollPosition >= halfwayPoint);
     };
