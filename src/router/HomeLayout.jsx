@@ -35,9 +35,9 @@ function Home() {
         } duration-700 `}
       >
         {/* // Menu // */}
-        <div className=" w-screen bg-red-800 generalPadding">Hello</div>
+        <div className=" w-screen bg-red-800 generalPadding ">Hello</div>
         {/* // Outlet // */}
-        <div className=" w-screen ">
+        <div className=" w-screen rotate-[0deg] ">
           <Outlet />
         </div>
       </div>

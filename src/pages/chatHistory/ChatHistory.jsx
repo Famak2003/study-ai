@@ -3,7 +3,6 @@ import "./chatHistory.scss";
 import * as Button from "../../components/Buttons";
 import ChatHistoryElement from "./ChatHistoryElement";
 import { Link } from "react-router-dom";
-import useIsWindowScrolled from "../../hooks/useIsWindowScrolled";
 
 function Home() {
   return (
