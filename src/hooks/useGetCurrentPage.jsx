@@ -1,23 +1,17 @@
-import { useEffect, useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function useGetCurrentPage() {
-    const location = useLocation()
-    const [currentPage, setCurrentPage] = useState("")
-    useEffect(()=>{
-        const getPage = ()=>{
-            const split = location.pathname.split("/")
-            const splitLength = split.length
-            setCurrentPage(()=>{
-                return(
-                    split[splitLength - 1]
-                )
-            })
-        }
+  const location = useLocation();
+  const [currentPage, setCurrentPage] = useState("");
 
-        getPage()
-    }, [location.pathname])
-    return [currentPage]
+  useEffect(() => {
+    const loc = location.pathname;
+    setCurrentPage(() => {
+      return loc.split("/").pop();
+    });
+  }, [location.pathname]);
+  return [currentPage];
 }
 
-export default useGetCurrentPage
+export default useGetCurrentPage;

@@ -8,6 +8,8 @@ module.exports = {
         "custom-black": "#202020",
         "charcoal-gray": "#292929",
         "light-gray": "#878787",
+        "medium-gray": "#302F2F",
+        "light-medium-gray": "#353434",
         "custom-white": "#f4f4f4",
       },
       screens: {

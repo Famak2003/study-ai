@@ -1,14 +1,12 @@
 import Error from "../components/ui/Error";
-import AppLayout from "./AppLayout";
-import AuthLayout from "./AuthLayout";
-import HomeLayout from "./HomeLayout";
 import * as Pages from "./../pages";
 import { action as chatAction } from "../pages/chat/Chat";
 import { createBrowserRouter } from "react-router-dom";
+import { Applayout, AuthLayout, HomeLayout } from "../layouts";
 
 const router = createBrowserRouter([
   {
-    element: <AppLayout />,
+    element: <Applayout />,
     errorElement: <Error />,
     children: [
       {
@@ -44,6 +42,7 @@ const router = createBrowserRouter([
         ],
       },
     ],
+    
   },
 ]);
 
