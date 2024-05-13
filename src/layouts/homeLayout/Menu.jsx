@@ -1,7 +1,7 @@
 import ChatHistoryElement from "../../components/ui/ChatHistoryElement";
 
 export function Menu() {
-  return <div className=" w-[90vw] bg-custom-black pt-[10rem] generalPadding ">
+  return <div className=" Customise-ScrollBar w-[90vw] bg-custom-black pt-[10rem] generalPadding h-screen overflow-y-scroll ">
     <div className=" flexing-cols gap-[3rem]">
       <div className=" flexing-cols gap-[2rem]">
         <p>Today</p>
@@ -9,7 +9,7 @@ export function Menu() {
           {Array.from({ length: 2 }, (_, i) => i).map((_, idx) => (
             <ChatHistoryElement
               key={idx}
-              keyword={"who is the tallest? ... Gold 😂"} />
+              keyword={"Lorem ipsum, dolor sit amet consectetur adipisicing elit"} />
           ))}
         </ul>
       </div>
@@ -29,7 +29,7 @@ export function Menu() {
           {Array.from({ length: 9 }, (_, i) => i).map((_, idx) => (
             <ChatHistoryElement
               key={idx}
-              keyword={"Can a chicken give birth to a horse?? ...what!!"} />
+              keyword={"Lorem ipsum dolor, sit amet consectetur"} />
           ))}
         </ul>
       </div>

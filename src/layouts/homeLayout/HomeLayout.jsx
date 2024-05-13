@@ -36,7 +36,7 @@ function Home() {
       <div
         className={` home-container flex w-fit ${
           dispayMenu ? "translate-x-0" : "translate-x-[-90vw]"
-        } duration-700 `}
+        } duration-700 h-full ring-2 ring-red-600 `}
       >
         {/* // Menu // */}
         <Menu />
@@ -62,7 +62,7 @@ function Home() {
       {/* // Scroll To Top Mechanics // */}
       {isScrolled && (
         <div
-          className=" fixed bottom-[4rem] right-[.5rem] mobile:right-[2rem]"
+          className=" fixed bottom-[4rem] right-[.5rem] mobile:right-[2rem] h-full"
           onClick={handleScrollToTop}
         >
           <img

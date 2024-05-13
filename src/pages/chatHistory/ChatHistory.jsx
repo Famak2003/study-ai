@@ -25,7 +25,7 @@ function Home() {
               <ChatHistoryElement
                 addBg={true}
                 key={idx}
-                keyword={"who is the tallest? ... Gold 😂"}
+                keyword={"Lorem ipsum dolor, sit amet consectetur"}
                 addDelete={true}
               />
             ))}
