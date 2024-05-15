@@ -5,24 +5,20 @@ import GOOGLE from "./../assets/google.png";
 import {useDispatch} from "react-redux"
 
 import { Form } from "antd";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import * as Hooks from "../hooks";
 import { Primary } from "../components/Buttons";
 import { useEffect, useState } from "react";
-import {useNavigate} from 'react-router-dom'
-// import useHandleGoogleSignIn from "../hooks/useHandleGoogleSignIn";
+
 import GoogleSignIn from "../fireFunctions/GoogleSignIn";
 import Login from "../fireFunctions/Login";
 import Signup from "../fireFunctions/Signup";
 import { setUserLogin } from '../redux/slices/authSlice';
 
-// const socials = [
-//   { alt: "google", image: GOOGLE },
-//   { alt: "facebook", image: FACEBOOK },
-//   // { alt: "apple", image: APPLE },
-// ];
+
 
 function Auth() {
+  const location = useLocation()
   const nav = useNavigate()
   const dispatch = useDispatch()
   const [currentPage] = Hooks.useGetCurrentPage();
@@ -45,6 +41,13 @@ function Auth() {
     }
   };
 
+  // useEffect(()=>{
+  //   const dest = location?.state?.destination
+  //   if (dest) {
+  //     toast.error("Please login to access page")
+  //   }
+  //   return
+  // }, [location])
   // console.log(currentPage)
 
 
@@ -55,7 +58,8 @@ function Auth() {
     try {
       const response = await Login(value.email, value.password)
       console.log("response from Login ===> ", response)
-      nav("/home/chat-history");
+      const destination = location?.state?.destination ? location.state.destination : "/home/chat-history"
+      nav( destination , { replace: true });
       dispatch(setUserLogin(true))
       toast.success("Login Successful")
 
